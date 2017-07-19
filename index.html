@@ -20,6 +20,17 @@ function getOrgHTMLfromJSONObject(objOrg) {
   } catch (err) {
   }
   
+  // Try to add the org's description IF length > 0
+  try {
+    if (objOrg.description.length > 0) {
+      strReturn += "<br />" + objOrg.description;
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
   // Wrap org full name in table cell
   strReturn = "<td>" + strReturn + "</td>";
   
