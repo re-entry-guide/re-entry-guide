@@ -1,5 +1,9 @@
 [
-  {"org_name":"Washington State Employment Security Department","county":"All","address":"P.O. Box 9046, Olympia, WA 98507"},
-  {"org_name":"WorkSource","county":"All","address":"N/A"},
-  {"org_name":"Washington State Department of Licensing","county":"All","address":"P.O. Box 9020, Olympia, WA 98507"}
+  {"org_name":"Washington State Employment Security Department","county":"All","address":"P.O. Box 9046, Olympia, WA 98507","phone":"(360) 902-9500","web":"esd.wa.gov"},
+  {"org_name":"WorkSource","county":"All","address":"N/A","phone":"(888) 316-5627","web":"www.worksourcewa.com"},
+  {"org_name":"Washington State Department of Licensing","county":"All","address":"P.O. Box 9020, Olympia, WA 98507","phone":"(360) 902-3600","web":" https://fortress.wa.gov/dol/dolprod/dsdreinstatements/"},
+  {"org_name":"The Northwest Justice Project","county":"All","address":"401 Second Avenue S., Suite 407, Seattle, WA 98104","phone":"(888) 201-1012","web":"nwjustice.org"},
+  {"org_name":"Northwest Immigrant Rights Project","county":"All","address":"615 2nd Ave. S. #400, Seattle, WA 98104","phone":"(206) 587-4009","web":"www.nwirp.org"},
+  {"org_name":"Washington Law Help","county":"All","address":"N/A","phone":"N/A","web":"http://www.washingtonlawhelp.org/"},
+  {"org_name":"Narcotics Anonymous","county":"All","address":"N/A","phone":"N/A","web":"https://www.na.org/"}
 ]
