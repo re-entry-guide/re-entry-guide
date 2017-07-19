@@ -1,15 +1,15 @@
 [
-  {"org_name":"Washington State Employment Security Department","county":"All","address":"P.O. Box 9046, Olympia, WA 98507","phone":"(360) 902-9500","web":"https://esd.wa.gov"},
-  {"org_name":"WorkSource","county":"All","address":"N/A","phone":"(888) 316-5627","web":"https://www.worksourcewa.com"},
-  {"org_name":"Washington State Department of Licensing","county":"All","address":"P.O. Box 9020, Olympia, WA 98507","phone":"(360) 902-3600","web":"https://fortress.wa.gov/dol/dolprod/dsdreinstatements/"},
-  {"org_name":"The Northwest Justice Project","county":"All","address":"401 Second Avenue S., Suite 407, Seattle, WA 98104","phone":"(888) 201-1012","web":"https://nwjustice.org"},
-  {"org_name":"Northwest Immigrant Rights Project","county":"All","address":"615 2nd Ave. S. #400, Seattle, WA 98104","phone":"(206) 587-4009","web":"https://www.nwirp.org"},
-  {"org_name":"Washington Law Help","county":"All","address":"N/A","phone":"N/A","web":"https://www.washingtonlawhelp.org/"},
-  {"org_name":"Narcotics Anonymous","county":"All","address":"N/A","phone":"N/A","web":"https://www.na.org/"},
-  {"org_name":"Alcoholics Anonymous","county":"All","address":"N/A","phone":"N/A","web":"http://www.aa.org/"},
-  {"org_name":"Goodwill Industries","county":"All","address":"714 S. 27th St., Tacoma, WA 98409","phone":"(253) 573-6500","web":"https://www.goodwillwa.org/"},
-  {"org_name":"Washington Connection ","county":"All","address":"N/A","phone":"N/A","web":"https://www.washingtonconnection.org/home"},
-  {"org_name":"Washington State Department of Social and Health Services","county":"All","address":"N/A","phone":"(877) 501-2233","web":"https://www.dshs.wa.gov/"},
-  {"org_name":"Division of Child Support","county":"All","address":"N/A","phone":"(877) 501-2233","web":"www.dshs.wa.go"},
-  {"org_name":"Oxford Houses Hotline - Benton County","county":"Benton","address":"N/A","phone":"(509)-396-7659","web":"http://bfcac.org/home-base/oxford-houses-of-wa-chapter-22"}
+{"org_name":"Washington State Employment Security Department","county":"All","address":"P.O. Box 9046, Olympia, WA 98507","phone":"(360) 902-9500","web":"https://esd.wa.gov"},
+{"org_name":"WorkSource","county":"All","address":"N/A","phone":"(888) 316-5627","web":"https://www.worksourcewa.com"},
+{"org_name":"Washington State Department of Licensing","county":"All","address":"P.O. Box 9020, Olympia, WA 98507","phone":"(360) 902-3600","web":"https://fortress.wa.gov/dol/dolprod/dsdreinstatements/"},
+{"org_name":"The Northwest Justice Project","county":"All","address":"401 Second Avenue S., Suite 407, Seattle, WA 98104","phone":"(888) 201-1012","web":"https://nwjustice.org"},
+{"org_name":"Northwest Immigrant Rights Project","county":"All","address":"615 2nd Ave. S. #400, Seattle, WA 98104","phone":"(206) 587-4009","web":"https://www.nwirp.org"},
+{"org_name":"Washington Law Help","county":"All","address":"N/A","phone":"N/A","web":"https://www.washingtonlawhelp.org/"},
+{"org_name":"Narcotics Anonymous","county":"All","address":"N/A","phone":"N/A","web":"https://www.na.org/"},
+{"org_name":"Alcoholics Anonymous","county":"All","address":"N/A","phone":"N/A","web":"http://www.aa.org/"},
+{"org_name":"Goodwill Industries","county":"All","address":"714 S. 27th St., Tacoma, WA 98409","phone":"(253) 573-6500","web":"https://www.goodwillwa.org/"},
+{"org_name":"Washington Connection ","county":"All","address":"N/A","phone":"N/A","web":"https://www.washingtonconnection.org/home"},
+{"org_name":"Washington State Department of Social and Health Services","county":"All","address":"N/A","phone":"(877) 501-2233","web":"https://www.dshs.wa.gov/"},
+{"org_name":"Division of Child Support","county":"All","address":"N/A","phone":"(877) 501-2233","web":"www.dshs.wa.go"},
+{"org_name":"Oxford Houses Hotline - Benton County","county":"Benton","address":"N/A","phone":"(509)-396-7659","web":"http://bfcac.org/home-base/oxford-houses-of-wa-chapter-22"}
 ]
