@@ -84,9 +84,11 @@ function getOrgHTMLfromJSONObject(objOrg) {
   }
   
   strReturn += "</td>"; // close contact table cell
-  
-  
+   
   // TODO: Add other table columns here
+ 
+  // Add a column to report as closed
+  strReturn += "<td>" + "<button type='button'>Report as closed</button>" + "</td>";
   
   // Wrap that in a table row
   strReturn = "<tr>" + strReturn + "</tr>";
@@ -110,6 +112,7 @@ function changeText() {
         strOrgsList += "<td><b>Organization</b></td>";
         strOrgsList += "<td><b>County</b></td>";
         strOrgsList += "<td><b>Contact info</b></td>";
+        strOrgsList += "<td><b>Report</b></td>";
         // TODO: Add other table columns here
         strOrgsList += "</tr>";
         // alert ( typeof dataObj ); 
