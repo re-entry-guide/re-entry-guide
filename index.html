@@ -47,6 +47,45 @@ function getOrgHTMLfromJSONObject(objOrg) {
     strReturn += "<td></td>";
   }
   
+  // Add contact info
+  strReturn += "<td>"; // open contact table cell
+  
+  // Add Address
+  try {
+    if (objOrg.address.length > 0) {
+      strReturn += objOrg.address + "<br />";
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  // Add Email
+  try {
+    if (objOrg.email.length > 0) {
+      strReturn += "<a href='mailto:" + objOrg.email + "'>" + objOrg.email + "</a>" + "<br />";
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  // Add Phone
+  try {
+    if (objOrg.phone.length > 0) {
+      strReturn += objOrg.phone + "<br />";
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  strReturn += "</td>"; // close contact table cell
+  
+  
   // TODO: Add other table columns here
   
   // Wrap that in a table row
@@ -70,6 +109,7 @@ function changeText() {
         strOrgsList += "<tr>";
         strOrgsList += "<td><b>Organization</b></td>";
         strOrgsList += "<td><b>County</b></td>";
+        strOrgsList += "<td><b>Contact info</b></td>";
         // TODO: Add other table columns here
         strOrgsList += "</tr>";
         // alert ( typeof dataObj ); 
