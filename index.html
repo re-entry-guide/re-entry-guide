@@ -6,12 +6,13 @@
 <script type="text/javascript">
 // Returns a string from the org JSON object
 function getOrgHTMLfromJSONObject(objOrg) {
-  // Open a table row
-  var strReturn = "<tr>";
 
+  var strReturn = "";
+
+  // Start with the org_name
   strReturn = objOrg.org_name.toString();
   
-  // Try to wrap org full name in orgWeb IF orgWeb length > 0
+  // Try to wrap org full name in web IF web.length > 0
   try {
     if (objOrg.web.length > 0) {
       strReturn = "<a href='" + objOrg.web + "'>" + strReturn + "</a>";
@@ -21,8 +22,11 @@ function getOrgHTMLfromJSONObject(objOrg) {
   
   // Wrap org full name in table cell
   strReturn = "<td>" + strReturn + "</td>";
-  // Close the table row
-  strReturn += "</tr>";
+  
+  // TODO: Add other table cells here
+  
+  // Wrap that in a table row
+  strReturn = "<tr>" + strReturn + "</tr>";
   return strReturn ;
   
 } // end getOrgHTMLfromJSONObject
