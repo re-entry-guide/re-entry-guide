@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Re-Entry Guide</title>
+
+<script type="text/javascript">
+// Returns a string from the org JSON object
+function getOrgHTMLfromJSONObject(objOrg) {
+  // Open a table row
+  var strReturn = "<tr>";
+
+  strReturn = objOrg.org_name.toString();
+  
+  /* TODO: activate this code later
+  // Try to wrap org full name in orgWeb IF orgWeb length > 0
+  try {
+    if (objOrg.orgWeb.length > 0) {
+      strReturn = "<a href='" + objOrg.orgWeb + "'>" + strReturn + "</a>";
+    }
+  } catch (err) {
+  }
+  /*
+  
+  // Wrap org full name in table cell
+  strReturn = "<td>" + strReturn + "</td>";
+  // Close the table row
+  strReturn += "</tr>";
+  return strReturn ;
+  
+} // end getOrgHTMLfromJSONObject
+
+function changeText() {
+  document.getElementById('pLocalOrgs').innerHTML = 'Loading requested data...';
+  
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    var DONE = this.DONE || 4;
+    if (this.readyState === DONE){
+        // alert(this.readyState);
+        // alert(request.responseText);
+        var dataObj = JSON.parse(request.responseText);
+        var strOrgsList = "<table>";
+        // Add a table row of headers
+        strOrgsList += "<tr>";
+        strOrgsList += "<td><b>Organization</b></td>";
+        strOrgsList += "</tr>";
+        // alert ( typeof dataObj ); 
+        // alert (dataObj.toString() )
+        // alert (dataObj[1].orgShort.toString() + " test" );
+        // alert (dataObj.length);
+        // for each object in the dataObj array, parse it:
+        for (i = 0; i < dataObj.length; i++ ){
+          strOrgsList += getOrgHTMLfromJSONObject(dataObj[i]); 
+        }
+        strOrgsList += "</table>";
+        // alert (strOrgsList); 
+        document.getElementById('pLocalOrgs').innerHTML = strOrgsList;
+    }
+  };
+  request.open('GET', 'data.json', true);
+  request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');  // Tells server that this call is made for ajax purposes.
+  request.send(null);  // No data needs to be sent along with the request.
+  document.getElementById('pLocalOrgs').innerHTML = 'Rendering requested data...';
+  
+}
+</script>
+
+</head>
+
+<body onload="changeText()">
+
+<h1>Re-Entry Guide</h1>
+
+<p>
+  Welcome
+</p>
+
+<p id="pLocalOrgs">Loading data...</p>
+
+</body>
+</html> 
