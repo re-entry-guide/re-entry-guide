@@ -31,10 +31,23 @@ function getOrgHTMLfromJSONObject(objOrg) {
     strReturn += "";
   }
   
-  // Wrap org full name in table cell
+  // Wrap org name in table cell
   strReturn = "<td>" + strReturn + "</td>";
   
-  // TODO: Add other table cells here
+  // TODO: Add other org info here
+  
+  // Add county info
+  try {
+    if (objOrg.county.length > 0) {
+      strReturn += "<td>" + objOrg.county + "</td>";
+    } else {
+      strReturn += "<td></td>";
+    }
+  } catch (err) {
+    strReturn += "<td></td>";
+  }
+  
+  // TODO: Add other table columns here
   
   // Wrap that in a table row
   strReturn = "<tr>" + strReturn + "</tr>";
@@ -56,6 +69,8 @@ function changeText() {
         // Add a table row of headers
         strOrgsList += "<tr>";
         strOrgsList += "<td><b>Organization</b></td>";
+        strOrgsList += "<td><b>County</b></td>";
+        // TODO: Add other table columns here
         strOrgsList += "</tr>";
         // alert ( typeof dataObj ); 
         // alert (dataObj.toString() )
