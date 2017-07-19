@@ -11,15 +11,13 @@ function getOrgHTMLfromJSONObject(objOrg) {
 
   strReturn = objOrg.org_name.toString();
   
-  /* TODO: activate this code later
   // Try to wrap org full name in orgWeb IF orgWeb length > 0
   try {
-    if (objOrg.orgWeb.length > 0) {
-      strReturn = "<a href='" + objOrg.orgWeb + "'>" + strReturn + "</a>";
+    if (objOrg.web.length > 0) {
+      strReturn = "<a href='" + objOrg.web + "'>" + strReturn + "</a>";
     }
   } catch (err) {
   }
-  */
   
   // Wrap org full name in table cell
   strReturn = "<td>" + strReturn + "</td>";
