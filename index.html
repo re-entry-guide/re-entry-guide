@@ -45,6 +45,18 @@ function getOrgHTMLfromJSONObject(objOrg) {
     if (objOrg.employment == "Y") {
       strServices += "Employment ";
     }
+    if (objOrg.legal == "Y") {
+      strServices += "Legal services ";
+    }
+    if (objOrg.education == "Y") {
+      strServices += "Education ";
+    }
+    if (objOrg.health == "Y") {
+      strServices += "Health ";
+    }
+    if (objOrg.other == "Y") {
+      strServices += "Other services ";
+    }
     strReturn += "<td>" + strServices + "</td>";
   } catch (err) {
     strReturn += "<td></td>";
