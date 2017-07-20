@@ -20,10 +20,75 @@ function getOrgHTMLfromJSONObject(objOrg) {
   } catch (err) {
   }
   
-  // Wrap org full name in table cell
+  // Try to add the org's description IF length > 0
+  try {
+    if (objOrg.description.length > 0) {
+      strReturn += "<br />" + objOrg.description;
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  // Wrap org name in table cell
   strReturn = "<td>" + strReturn + "</td>";
   
-  // TODO: Add other table cells here
+  // TODO: Add other org info here
+  
+  // Add county info
+  try {
+    if (objOrg.county.length > 0) {
+      strReturn += "<td>" + objOrg.county + "</td>";
+    } else {
+      strReturn += "<td></td>";
+    }
+  } catch (err) {
+    strReturn += "<td></td>";
+  }
+  
+  // Add contact info
+  strReturn += "<td>"; // open contact table cell
+  
+  // Add Address
+  try {
+    if (objOrg.address.length > 0) {
+      strReturn += objOrg.address + "<br />";
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  // Add Email
+  try {
+    if (objOrg.email.length > 0) {
+      strReturn += "<a href='mailto:" + objOrg.email + "'>" + objOrg.email + "</a>" + "<br />";
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  // Add Phone
+  try {
+    if (objOrg.phone.length > 0) {
+      strReturn += objOrg.phone + "<br />";
+    } else {
+      strReturn += "";
+    }
+  } catch (err) {
+    strReturn += "";
+  }
+  
+  strReturn += "</td>"; // close contact table cell
+   
+  // TODO: Add other table columns here
+ 
+  // Add a column to report as closed
+  strReturn += "<td>" + "<button type='button'>Report as closed</button>" + "</td>";
   
   // Wrap that in a table row
   strReturn = "<tr>" + strReturn + "</tr>";
@@ -45,6 +110,10 @@ function changeText() {
         // Add a table row of headers
         strOrgsList += "<tr>";
         strOrgsList += "<td><b>Organization</b></td>";
+        strOrgsList += "<td><b>County</b></td>";
+        strOrgsList += "<td><b>Contact info</b></td>";
+        strOrgsList += "<td><b>Report</b></td>";
+        // TODO: Add other table columns here
         strOrgsList += "</tr>";
         // alert ( typeof dataObj ); 
         // alert (dataObj.toString() )
@@ -77,7 +146,36 @@ function changeText() {
   Welcome
 </p>
 
+<p>
+  <form>
+    Filter:
+    <select name="slcCounty">
+      <option value="king">King / Seattle</option>
+      <option value="pierce">Pierce / Tacoma</option>
+      <option value="snohomish">Snohomish / Everett</option>
+    </select>
+    <select name="slcServices">
+      <option value="housing">Housing</option>
+      <option value="employment">Employment</option>
+      <option value="legal">Legal services</option>
+      <option value="education">Education</option>
+      <option value="health">Health</option>
+      <option value="other">Other services</option>
+    </select>
+    <select name="slcGender">
+      <option value="man">Man</option>
+      <option value="woman">Woman</option>
+      <option value="other">Other<option>
+    </select>
+    <button type="button">Show results</button>
+  </form>
+</p>
+  
 <p id="pLocalOrgs">Loading data...</p>
 
+<p>
+  TODO: Footer with links to other guides and resources
+</p>
+  
 </body>
 </html> 
