@@ -40,22 +40,27 @@ function getOrgHTMLfromJSONObject(objOrg) {
   var strServices = "";
   try {
     if (objOrg.housing == "Y") {
-      strServices += "Housing ";
+      strServices += "Housing";
     }
     if (objOrg.employment == "Y") {
-      strServices += "Employment ";
+      if (strServices.length > 0) { strServices += ", "; }
+      strServices += "Employment";
     }
     if (objOrg.legal == "Y") {
-      strServices += "Legal services ";
+      if (strServices.length > 0) { strServices += ", "; }
+      strServices += "Legal services";
     }
     if (objOrg.education == "Y") {
-      strServices += "Education ";
+      if (strServices.length > 0) { strServices += ", "; }
+      strServices += "Education";
     }
     if (objOrg.health == "Y") {
-      strServices += "Health ";
+      if (strServices.length > 0) { strServices += ", "; }
+      strServices += "Health";
     }
     if (objOrg.other == "Y") {
-      strServices += "Other services ";
+      if (strServices.length > 0) { strServices += ", "; }
+      strServices += "Other services";
     }
     strReturn += "<td>" + strServices + "</td>";
   } catch (err) {
