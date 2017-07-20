@@ -37,12 +37,15 @@ function getOrgHTMLfromJSONObject(objOrg) {
   // TODO: Add other org info here
   
   // Add services info
+  var strServices = "";
   try {
     if (objOrg.housing == "Y") {
-      strReturn += "<td>" + Housing + "</td>";
-    } else {
-      strReturn += "<td></td>";
+      strServices += "Housing ";
     }
+    if (objOrg.employment == "Y") {
+      strServices += "Employment ";
+    }
+    strReturn += "<td>" + strServices + "<td>";
   } catch (err) {
     strReturn += "<td></td>";
   }
