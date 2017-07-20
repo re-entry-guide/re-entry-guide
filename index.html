@@ -36,6 +36,17 @@ function getOrgHTMLfromJSONObject(objOrg) {
   
   // TODO: Add other org info here
   
+  // Add services info
+  try {
+    if (objOrg.housing == "Y") {
+      strReturn += "<td>" + Housing + "</td>";
+    } else {
+      strReturn += "<td></td>";
+    }
+  } catch (err) {
+    strReturn += "<td></td>";
+  }
+  
   // Add county info
   try {
     if (objOrg.county.length > 0) {
@@ -110,6 +121,7 @@ function changeText() {
         // Add a table row of headers
         strOrgsList += "<tr>";
         strOrgsList += "<td><b>Organization</b></td>";
+        strOrgsList += "<td><b>Service(s)</b></td>";
         strOrgsList += "<td><b>County</b></td>";
         strOrgsList += "<td><b>Contact info</b></td>";
         strOrgsList += "<td><b>Report</b></td>";
